@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youtube Clone</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/7f129890a9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <script>
+      window.addEventListener('load', function() {
+        // Scroll the page to the top
+        window.scrollTo(0, 0);
+      });
+      </script>
+    <div class="nav-bar">
+      <i class="fa-solid fa-bars fa-lg" style="color: #fff"></i>
+      <a href="javascript:void(0);" onclick="location.reload();">
+        <img src="Images/youtube-logo.png" />
+      </a>
+      <a href="javascript:void(0);" onclick="location.reload();" style="text-decoration: none;">
+        <p>Youtube</p>
+      </a>
+      <div class="search">
+        <input id="search" type="text" placeholder="Search" />
+        <div class="search-corner">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="1.25em"
+            viewBox="0 0 512 512"
+          >
+            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <style>
+              svg {
+                fill: #f7f7f7;
+              }
+              svg {
+                background-color: #262626;
+              }
+            </style>
+            <path
+              d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="mic">
+        <i
+          class="fa-solid fa-microphone fa-lg"
+          style="color: #f4f7fa; background-color: #262626; border-radius: 50%"
+        ></i>
+      </div>
+      <i
+        id="upload-key"
+        class="fa-solid fa-arrow-up fa-lg"
+        style="color: #f4f7fa"
+      ></i>
+      <i
+        id="notification-key"
+        class="fa-regular fa-bell fa-lg"
+        style="color: #f0f2f4"
+      ></i>
+      <img id="profile" src="Images/profile.jpeg" />
+    </div>
+    <div class="container">
+      <div class="left-slider">
+        <div class="home-shorts-subscriptions">
+          <ul>
+            <li id="Home">
+              <i class="fa-solid fa-house fa-lg" style="color: #f1f2f3"></i>
+              Home
+            </li>
+            <li>
+              <img id="shorts-logo" src="Images/youtube-shorts-black.png" />
+              Shorts
+            </li>
+            <li>
+              <img
+                id="subscriptions-logo"
+                src="Images/subscriptions-logo.png"
+              />
+              Subscriptions
+            </li>
+          </ul>
+        </div>
+        <div class="you">
+          <ul class="you-heading">
+            <h3>You</h3>
+            <h3>></h3>
+          </ul>
+          <ul class="you-content">
+            <li id="Channel">
+              <i class="fa-regular fa-user fa-lg" style="color: #f2f2f3"></i>
+              Your Channel
+            </li>
+            <li>
+              <i
+                class="fa-solid fa-clock-rotate-left fa-lg"
+                style="color: #f0f2f5"
+              ></i>
+              History
+            </li>
+            <li>
+              <i class="fa-solid fa-play fa-lg" style="color: #f3f6fb"></i> Your
+              Videos
+            </li>
+            <li>
+              <i class="fa-regular fa-clock fa-lg" style="color: #e8ecf2"></i>
+              Watch Later
+            </li>
+            <li>
+              <i
+                class="fa-solid fa-angle-down fa-lg"
+                style="color: #f9fafb"
+              ></i>
+              Show More
+            </li>
+          </ul>
+        </div>
+        <div class="subscriptions">
+          <h3>Subscriptions</h3>
+          <ul>
+            <li class="subscriptions-item" id="subscriptions-1">
+              <img src="Images/code-with-harry-logo.png" />CodeWithHarry
+            </li>
+            <li class="subscriptions-item">
+              <img src="Images/apna-college-logo.png" />Apna College
+            </li>
+            <li class="subscriptions-item">
+              <img src="Images/tanmay-bhat-logo.png" />Tanmay Bhat
+            </li>
+            <li class="subscriptions-item">
+              <img src="Images/mrBeast-logo.png" />MrBeast
+            </li>
+            <li class="subscriptions-item">
+              <img src="Images/BeastBoyShub-logo.png" />BeastBoyShub
+            </li>
+            <li class="subscriptions-item">
+              <img src="Images/Slayy-Point-logo.png" />Slayy Point
+            </li>
+            <li class="subscriptions-item">
+              <i class="fa-solid fa-angle-down fa-lg" style="color: #f9fafb"></i
+              >Show More
+            </li>
+          </ul>
+        </div>
+        <!-- <div class="explore">
+          <h3>Explore</h3>
+          <ul>
+            <li class="explore-item"><img src="Images/trending.png"> Trending</li>
+          </ul>
+        </div> -->
+      </div>
+      <div class="main-content">
+        <div class="main-upper">
+          <ul>
+            <li id="all">All</li>
+            <li>Sports Entertainment</li>
+            <li>Gaming</li>
+            <li>Sketch Comedy</li>
+            <li>Mixes</li>
+            <li>Web Development</li>
+            <li>Music</li>
+            <li>Cricket</li>
+            <li>Podcasts</li>
+            <li>News</li>
+          </ul>
+        </div>
+        <div class="main-lower">
+          <div class="first-row row">
+            <img class="thumbnail" src="Images/video-1.png">
+            <div class="video-title">
+              <img src="Images/Rajasekhar Mamidanna.png">
+            <div>
+              <p>The Bhutan Experience | Stand up Comedy By Rajasekhar Mamidanna</p>
+              <p class="channel-name">Rajasekhar Mamidanna <i class="fa-solid fa-check fa-xs" style="color: #000;"></i></p>
+              <p class="views-time">832K views • 5 months ago</p>
+              </div>
+            </div>
+            <br>
+            <img class="thumbnail" src="Images/video-4.png">
+            <div class="video-title">
+              <img src="Images/samay-raina.png">
+            <div>
+              <p>JOEL D'SOUZA ARROGANCE COMPILATION | CHESS</p>
+              <p class="channel-name">Samay Raina <i class="fa-solid fa-check fa-xs" style="color: #000;"></i></p>
+              <p class="views-time">832K views • 5 months ago</p>
+              </div>
+            </div>
+          </div>
+          <div class="second-row row">
+            <img class="thumbnail" src="Images/video-2.png">
+            <div class="video-title">
+              <img src="Images/wrestle chatter.png">
+              <div>
+                <p>And New Champion....Big Shock!? Roman Reigns in DANGER, CM Punk Return Tease</p>
+                <p class="channel-name">Wrestle Chatter <i class="fa-solid fa-check fa-xs" style="color: #000;"></i></p>
+                <p class="views-time">832K views • 5 months ago</p>
+              </div>
+            </div>
+            <br>
+            <img class="thumbnail" src="Images/video-5.png">
+            <div class="video-title">
+              <img src="Images/intellipaat.png">
+              <div>
+                <p>SQL Course | SQL Training | SQL Tutorial For Beginners | Intellipaat</p>
+                <p class="channel-name">Intellipaat <i class="fa-solid fa-check fa-xs" style="color: #000;"></i></p>
+                <p class="views-time">832K views • 5 months ago</p>
+              </div>
+            </div>
+          </div>
+          <div class="third-row row">
+            <img class="thumbnail" src="Images/video-3.png">
+            <div class="video-title">
+              <img src="Images/CS50.png">
+              <div>
+                <p>CS50 Fall 2023 - Lecture 7 - SQL (live, unedited)</p>
+                <p class="channel-name">CS50 <i class="fa-solid fa-check fa-xs" style="color: #000;"></i></p>
+                <p class="views-time">832K views • 5 months ago</p>
+              </div>
+            </div>
+            <br>
+            <img class="thumbnail" src="Images/video-6.png">
+            <div class="video-title">
+              <a href="#" style="text-decoration: none; color: #fff;">
+              <img src="Images/code-with-harry-logo.png">
+              </a>
+              <a href="video.html" style="text-decoration: none; color: #fff;">
+              <div>
+                <p>CSS Exercise 5 - Design this Layout | Sigma Web Development Course - Tutorial #37</p>
+                <p class="channel-name">CodeWithHarry <i class="fa-solid fa-check fa-xs" style="color: #000;"></i></p>
+                <p class="views-time">832K views • 5 months ago</p>
+              </div>
+              </a>
+            </div>
+          </div>
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
